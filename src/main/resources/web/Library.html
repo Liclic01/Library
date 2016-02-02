@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://code.jquery.com/jquery-1.12.0.js"></script>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<h1 class="text-center">Справочник книг</h1>
+<div class="row">
+    <div class="col-sm-4 col-md-offset-1">
+        <h2 class="text-center">Список авторов</h2>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Имя</th>
+                <th>Фамилия</th>
+                <th>Страна рождения</th>
+            </tr>
+            </thead>
+            <tbody id="authorList">
+            <script src="/js/authorList.js"></script>
+            </tbody>
+        </table>
+        <p><a href="addAuthor.html">
+            <button type="button" class="btn btn-default">Добавить автора</button>
+            </a>
+            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#deleteAuthor">Удалить автора</button>
+        <div id="deleteAuthor" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header"><button class="close" type="button" data-dismiss="modal">×</button>
+                <h4 class="modal-title">Удаление автора</h4>
+                </div>
+                <div class="modal-body">Удалить выбранного автора?</div>
+                <div class="modal-footer">
+                    <button  class="btn btn-default" type="button" data-dismiss="modal">Да</button>
+                    <button class="btn btn-default" type="button" data-dismiss="modal">Нет</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <div class="col-sm-4 col-md-offset-1">
+        <h2 class="text-center">Список книг автора</h2>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Название книги</th>
+                <th>Жанр</th>
+            </tr>
+            </thead>
+            <tbody id="list">
+            <script src="/js/bookList.js"></script>
+            </tbody>
+        </table>
+        <p>
+        <p><a href="addBook.html">
+            <button type="button" class="btn btn-default">Добавить книгу</button>
+        </a>
+            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#deleteBook">Удалить книгу</button>
+        <div id="deleteBook" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header"><button class="close" type="button" data-dismiss="modal">×</button>
+                        <h4 class="modal-title">Удаление книги</h4>
+                    </div>
+                    <div class="modal-body">Удалить выбранную книгу?</div>
+                    <div class="modal-footer">
+                        <button  class="btn btn-default" type="button" data-dismiss="modal">Да</button>
+                        <button class="btn btn-default" type="button" data-dismiss="modal">Нет</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+</body>
+</html>
